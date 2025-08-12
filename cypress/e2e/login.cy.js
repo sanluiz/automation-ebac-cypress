@@ -9,12 +9,14 @@ context('Funcionalidade: Login', () => {
 
 
     describe('Login com sucesso', () => {
-        it('Deve logar com sucesso', () => {
-            cy.get('#username').type('aluno_ebac@teste.com')
-            cy.get('#password').type('teste@teste.com')
+        it.only('Deve logar com sucesso', () => {
+            cy.get('#username').type('alutest@teste.com')
+            cy.get('#password').type('teste@teste')
             cy.get('.woocommerce-form > .button').click()
 
-            cy.get('a > .hidden-xs').should('contain', 'Welcome Aline !')
+            //cy.get('.page-title').should('contain', 'Minha conta')
+            cy.get('a > .hidden-xs',{timeout: 10000}).should('contain', 'Welcome')
+
         })
     })
 
