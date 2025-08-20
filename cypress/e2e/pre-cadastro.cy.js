@@ -5,7 +5,8 @@ const faker = require('faker');
 context('Funcionalidade: Pre Cadastro', () => {
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+        //cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/') //utlizando o cypress.json para colocar a baseUrl.
+        cy.visit('minha-conta')
 
     });
 
